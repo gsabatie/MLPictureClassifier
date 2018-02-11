@@ -51,7 +51,7 @@ sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 
-echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64:/usr/local/cuda/extras/CUPTI/lib64"' >> ~/.bashrc
 echo 'export CUDA_HOME=/usr/local/cuda' >> ~/.bashrc
 
 source ~/.bashrc
@@ -79,7 +79,7 @@ conda create -n tensorflow
 source activate tensorflow   
 
 # Install tensorflow with GPU support for python 3.6
-pip install tensorflow-gpu && pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.2.0-cp36-cp36m-linux_x86_64.whl
+pip install tensorflow-gpu==1.4
 # If the above fails, try the part below
 # pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.2.0-cp36-cp36m-linux_x86_64.whl
 
