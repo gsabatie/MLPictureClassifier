@@ -45,7 +45,7 @@ bash Miniconda3-latest-Linux-x86_64.sh -b
 source ~/.bashrc
 
 #Create conda env to install tf
-conda create -n tensorflow
+~/miniconda3/bin/conda create -n tensorflow
 # Activate env
 source activate tensorflow   
 
